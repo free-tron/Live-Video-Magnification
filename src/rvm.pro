@@ -1,11 +1,15 @@
-QT += core gui
+
+INCLUDEPATH += /usr/include/opencv4
+LIBS += -lopencv_core -lopencv_imgproc -lopencv_highgui -lopencv_imgcodecs -lopencv_videoio
+
+QT += core gui widgets
 
 linux {
 ###################################################################
 # !! Not tested, change to match your OpenCV (>= v4) installation #
     QT_CONFIG -= no-pkg-config
     CONFIG += link_pkgconfig
-    PKGCONFIG += opencv
+    PKGCONFIG += opencv4
 # !! Not tested, change to match your OpenCV (>= v4) installation #
 ###################################################################
 }
@@ -117,5 +121,5 @@ FORMS += \
     main/ui/MagnifyOptions.ui \
     main/ui/VideoView.ui
 
-# Spare me those nasty C++ compiler warnings and pray instead
-QMAKE_CXXFLAGS += -W2
+# Keep to modest warnings, without flooding.
+QMAKE_CXXFLAGS += -Wall -Wextra 

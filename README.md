@@ -1,6 +1,6 @@
 # Live Motion Magnification
 An OpenCV/Qt based realtime application for Eulerian Video Magnification. Works with multiple videos and cameras at the same time and let's you export the magnified videos.
-    This fork actually compiles properly.
+        This fork actually compiles properly.
 
 ## Examples
 ![Color Magnified Video](pictures/j_color-vid.png)
